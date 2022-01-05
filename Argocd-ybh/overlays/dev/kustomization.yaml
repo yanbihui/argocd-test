@@ -5,9 +5,9 @@ bases:
 # 部署的空间
 namespace: dev
 # 修改镜像
-#images:
-#- name: cnych/gitops-webapp
-#  newTag: 3f520d48
+images:
+- name: nginx
+  newTag: latest
 # 修改副本数量
 replicas:
 - name: nginx
