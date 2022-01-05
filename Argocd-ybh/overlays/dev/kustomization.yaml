@@ -14,5 +14,7 @@ images:
 replicas:
 - name: nginx
   count: 1
+- name: nginx-local
+  count: 2
 # name增加前缀
 namePrefix: dev-
