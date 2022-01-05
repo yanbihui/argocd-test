@@ -2,15 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    k8s-app: nginx
-  name: nginx
+    k8s-app: nginx-local
+  name: nginx-local
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      k8s-app: nginx
+      k8s-app: nginx-local
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -19,12 +19,12 @@ spec:
   template:
     metadata:
       labels:
-        k8s-app: nginx
+        k8s-app: nginx-local
     spec:
       containers:
       - image: nginx
         imagePullPolicy: Always
-        name: nginx
+        name: nginx-local
         resources:
           limits:
             cpu: 500m
