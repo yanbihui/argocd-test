@@ -4,7 +4,7 @@ bases:
 - ../../base
 resources:
 # 引入需要部署的资源
-- deployment.yaml
+- base/deployment.yaml
 # 部署的空间
 namespace: dev
 # 修改镜像
